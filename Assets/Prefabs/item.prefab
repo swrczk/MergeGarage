@@ -90,3 +90,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 8102149665958778549}
+  nextLvlItem: {fileID: 404363408459707612, guid: 44ac1888095c8784da23cdc2f99eca9b, type: 3}
+  type: 0
