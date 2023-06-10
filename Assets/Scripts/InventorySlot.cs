@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Pool;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
@@ -23,7 +21,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         else
         {
             var itemInSlot = transform.GetChild(0).GetComponent<DraggableItem>();
-            if (itemInSlot.GetItemType() == draggableItem.GetItemType())
+            if (itemInSlot.Type == draggableItem.Type)
             {
                 _levelState.Merge(itemInSlot, draggableItem, transform);
             }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public ItemType Type => type;
+    public DraggableItem NextLvlItem => nextLvlItem;
     [SerializeField]
     private Image image;
 
@@ -15,8 +17,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private ItemType type;
 
     private Transform _parentAfterDrag;
-
-    public DraggableItem GetNextLevelItem() => nextLvlItem;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -42,14 +42,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         _parentAfterDrag = parent;
     }
 
-
-    public ItemType GetItemType() => type;
-
     public void Setup(DraggableItem item)
     {
         image.sprite = item.image.sprite;
         image.raycastTarget = true;
-        nextLvlItem = item.GetNextLevelItem();
-        type = item.GetItemType();
+        nextLvlItem = item.NextLvlItem;
+        type = item.Type;
     }
 }

@@ -46,7 +46,7 @@ public class LevelState : MonoBehaviour
     {
         var newItem = _pool.Get();
         newItem.transform.SetParent(parent);
-        newItem.Setup(itemInSlot.GetNextLevelItem());
+        newItem.Setup(itemInSlot.NextLvlItem);
 
         _pool.Release(itemInSlot);
         _pool.Release(draggableItem);
