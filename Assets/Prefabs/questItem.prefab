@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6345733408913719482}
   - component: {fileID: 1284623003096068719}
   - component: {fileID: 8470534765113022502}
+  - component: {fileID: 84675138699101416}
   m_Layer: 5
-  m_Name: questGroup
+  m_Name: questItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,3 +102,20 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &84675138699101416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3195177651128599983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09344082a2fc62f48a4a009224fa0067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questInventorySlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  background: {fileID: 1284623003096068719}
+  finishedQuestColor: {r: 0.014017441, g: 0.5943396, b: 0.23587717, a: 1}
