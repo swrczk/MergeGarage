@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class QuestInventorySlot : MonoBehaviour, IDropHandler
 {
+    public event Action OnItemAdded;
+    
+    public bool IsEmpty { get; private set; } = true;
+
     [SerializeField]
     private DraggableItem requiredItem;
 
@@ -26,10 +30,12 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
     {
         var dropped = eventData.pointerDrag;
         var draggableItem = dropped.GetComponent<DraggableItem>();
-        if (draggableItem.Type == requiredItem.Type)
+        if (draggableItem.Type == requiredItem.Type && IsEmpty)
         {
+            IsEmpty = false;
             draggableItem.transform.localScale = 0.8f * Vector3.one;
             inventorySlot.OnDrop(eventData);
+            OnItemAdded?.Invoke();
         }
         else
         {
