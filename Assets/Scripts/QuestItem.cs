@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class QuestItem : MonoBehaviour
 {
+    public event Action OnQuestCompleted;
     [SerializeField]
     private List<QuestInventorySlot> questInventorySlots;
 
@@ -28,6 +30,12 @@ public class QuestItem : MonoBehaviour
             Debug.Log("Quest completed");
             background.color = finishedQuestColor;
             transform.SetAsLastSibling();
+            OnQuestCompleted?.Invoke();
         }
+    }
+
+    private void OnDestroy()
+    {
+        OnQuestCompleted = null;
     }
 }
