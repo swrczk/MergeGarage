@@ -7,12 +7,15 @@ public class LevelState : MonoBehaviour
     [SerializeField]
     private DraggableItem defaultItem;
 
+    [SerializeField]
+    private GameObject gridElement;
+
     private List<InventorySlot> _items;
     private ObjectPool<DraggableItem> _pool;
 
     private void Awake()
     {
-        _items = new List<InventorySlot>(FindObjectsOfType<InventorySlot>());
+        _items = new List<InventorySlot>(gridElement.GetComponentsInChildren<InventorySlot>());
         _pool = new ObjectPool<DraggableItem>(
             () => Instantiate(defaultItem, transform),
             item => item.gameObject.SetActive(true),
