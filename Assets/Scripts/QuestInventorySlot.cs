@@ -28,6 +28,10 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
     {
         var dropped = eventData.pointerDrag;
         var draggableItem = dropped.GetComponent<DraggableItem>();
+        
+        if(AnyIsBlocked(draggableItem, requiredItem))
+            return;
+        
         if (draggableItem.Type == requiredItem.Type && IsEmpty)
         {
             IsEmpty = false;
@@ -39,6 +43,11 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
         {
             Debug.Log("Wrong item");
         }
+    }
+
+    private bool AnyIsBlocked(DraggableItem draggableItem, DraggableItem requiredItem)
+    {
+        return draggableItem.IsBlocked || requiredItem.IsBlocked;
     }
 
     private void OnDestroy()

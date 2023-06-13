@@ -117,5 +117,7 @@ MonoBehaviour:
   questInventorySlots:
   - {fileID: 0}
   - {fileID: 0}
+  rewardSlot: {fileID: 0}
   background: {fileID: 1284623003096068719}
   finishedQuestColor: {r: 0.014017441, g: 0.5943396, b: 0.23587717, a: 1}
+  rewardReadyToCollectColor: {r: 0, g: 0.85167813, b: 1, a: 1}
