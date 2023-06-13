@@ -17,14 +17,24 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         var draggableItem = dropped.GetComponent<DraggableItem>();
 
         if (IsEmpty)
-            draggableItem.SetNewSlot(transform);
-        else
         {
-            var itemInSlot = transform.GetChild(0).GetComponent<DraggableItem>();
-            if (itemInSlot.Type == draggableItem.Type)
-            {
-                _levelState.Merge(itemInSlot, draggableItem, transform);
-            }
+            draggableItem.SetNewSlot(transform);
+            return;
         }
+
+        var itemInSlot = transform.GetChild(0).GetComponent<DraggableItem>();
+
+        if (AnyIsBlocked(draggableItem, itemInSlot))
+            return;
+        
+        if (itemInSlot.Type == draggableItem.Type)
+        {
+            _levelState.Merge(itemInSlot, draggableItem, transform);
+        }
+    }
+
+    private bool AnyIsBlocked(DraggableItem draggableItem, DraggableItem requiredItem)
+    {
+        return draggableItem.IsBlocked || requiredItem.IsBlocked;
     }
 }

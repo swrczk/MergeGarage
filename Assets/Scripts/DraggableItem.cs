@@ -1,3 +1,4 @@
+using System;
 using Mono.Cecil.Cil;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -5,6 +6,8 @@ using UnityEngine.UI;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public event Action OnEndDragItem;
+    public bool IsBlocked { get; private set; } = false;
     public ItemType Type => type;
     public DraggableItem NextLvlItem => nextLvlItem;
     [SerializeField]
@@ -20,6 +23,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(IsBlocked)
+            return;
+        
         _parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
@@ -35,11 +41,24 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         transform.SetParent(_parentAfterDrag);
         image.raycastTarget = true;
+        OnEndDragItem?.Invoke();
     }
 
     public void SetNewSlot(Transform parent)
     {
         _parentAfterDrag = parent;
+    }
+    
+    public void Block()
+    {
+        IsBlocked = true;
+        image.raycastTarget = false;
+    }
+    
+    public void Unlock()
+    {
+        IsBlocked = false;
+        image.raycastTarget = true;
     }
 
     public void Setup(DraggableItem item)
