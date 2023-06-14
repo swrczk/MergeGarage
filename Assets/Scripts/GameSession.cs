@@ -4,18 +4,18 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField]
     private GameEvent onCurrencyChanged;
-    
-    private int _currency = 0;
+
+    public int Currency { get; private set; } = 0;
 
     public void AddCurrency(int currencyAmount)
     {
-        _currency += currencyAmount;
-        onCurrencyChanged.Raise(this, _currency);
+        Currency += currencyAmount;
+        onCurrencyChanged.Raise(this, Currency);
     }
 
     public void ResetCurrency()
     {
-        _currency = 0;
-        onCurrencyChanged.Raise(this, _currency);
+        Currency = 0;
+        onCurrencyChanged.Raise(this, Currency);
     }
 }

@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
         coroutine = StartCoroutine(RunTimer(duration));
     }
 
-    public void StopTimer(float duration)
+    public void StopTimer()
     {
         StopCoroutine(coroutine);
     }
