@@ -2815,7 +2815,7 @@ GameObject:
   - component: {fileID: 1019097683}
   - component: {fileID: 1019097684}
   m_Layer: 5
-  m_Name: TopBar
+  m_Name: topBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3435,7 +3435,7 @@ Canvas:
   m_GameObject: {fileID: 1191756518}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 570267339}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
