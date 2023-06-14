@@ -5,6 +5,9 @@ using UnityEngine.Pool;
 
 public class LevelState : MonoBehaviour
 {
+    // public event Action<int> OnLevelCompleted;
+    // public event Action OnLevelFailed;
+
     [SerializeField]
     private Timer timer;
 
@@ -21,7 +24,7 @@ public class LevelState : MonoBehaviour
     private GameObject questsGroup;
 
     [SerializeField]
-    private Canvas levelCompletedScreen;
+    private LevelCompletedScreen levelCompletedScreen;
 
     [SerializeField]
     private Canvas levelFailedScreen;
@@ -39,7 +42,7 @@ public class LevelState : MonoBehaviour
         _gameSession = FindObjectOfType<GameSession>();
         _gameSession.ResetCurrency();
 
-        levelCompletedScreen.gameObject.SetActive(false);
+        levelCompletedScreen.HideScreen();
         levelFailedScreen.gameObject.SetActive(false);
 
         _items = new List<InventorySlot>(playgroundGroup.GetComponentsInChildren<InventorySlot>());
@@ -106,6 +109,10 @@ public class LevelState : MonoBehaviour
         {
             Debug.Log("All quests completed");
             levelCompletedScreen.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            timer.StopTimer();
+            var timeBonus = Mathf.RoundToInt(timer.CurrentTimeValue);
+            levelCompletedScreen.OnLevelCompleted(_gameSession.Currency, timeBonus);
         }
     }
 }
