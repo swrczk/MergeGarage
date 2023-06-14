@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 
 public class LevelState : MonoBehaviour
-{
+{ 
     [SerializeField]
     private DraggableItem defaultItem;
 
@@ -21,9 +21,14 @@ public class LevelState : MonoBehaviour
     private ObjectPool<DraggableItem> _pool;
     
     private int completedQuests = 0;
+    
+    private GameSession _gameSession;
 
     private void Awake()
     {
+        _gameSession = FindObjectOfType<GameSession>();
+        _gameSession.ResetCurrency();
+        
         congratulationsScreen.SetActive(false);
         
         _items = new List<InventorySlot>(playgroundGroup.GetComponentsInChildren<InventorySlot>());
@@ -40,7 +45,7 @@ public class LevelState : MonoBehaviour
                 item.transform.SetParent(transform);
             },
             item => Destroy(item.gameObject),
-            false, 10, 20
+            false, 50, 60
         );
     }
 
@@ -55,8 +60,9 @@ public class LevelState : MonoBehaviour
 
 
         var newItem = _pool.Get();
-        newItem.transform.SetParent(slot.transform);
+        newItem.transform.SetParent(slot.transform, false);
         newItem.Setup(item);
+        Debug.Log("Item spawned");
         return true;
     }
 

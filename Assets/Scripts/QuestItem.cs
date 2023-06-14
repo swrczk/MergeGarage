@@ -14,6 +14,13 @@ public class QuestItem : MonoBehaviour
     private RewardSlot rewardSlot;
 
     [SerializeField]
+    private int rewardCurrency;
+
+    [Header("UI")]
+    [SerializeField]
+    private CurrencyInfoElement currencyInfoElement;
+
+    [SerializeField]
     private Image background;
 
     [SerializeField]
@@ -24,8 +31,13 @@ public class QuestItem : MonoBehaviour
 
     private int _filledSlots = 0;
 
+    private GameSession _gameSession;
+
     private void Awake()
     {
+        _gameSession = FindObjectOfType<GameSession>();
+
+        currencyInfoElement.ChangeCurrencyText(rewardCurrency);
         questInventorySlots.ForEach(x => x.OnItemAdded += OnItemAdded);
         if (rewardSlot != null)
         {
@@ -44,10 +56,10 @@ public class QuestItem : MonoBehaviour
     private void OnItemAdded()
     {
         _filledSlots++;
-        
+
         if (_filledSlots != questInventorySlots.Count) return;
-        
-        if(rewardSlot != null)
+
+        if (rewardSlot != null)
         {
             transform.SetAsFirstSibling();
             background.color = rewardReadyToCollectColor;
@@ -62,6 +74,7 @@ public class QuestItem : MonoBehaviour
         Debug.Log("Quest completed");
         background.color = finishedQuestColor;
         transform.SetAsLastSibling();
+        _gameSession.AddCurrency(rewardCurrency);
         OnQuestCompleted?.Invoke();
     }
 

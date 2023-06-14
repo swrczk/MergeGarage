@@ -1,5 +1,4 @@
 using System;
-using Mono.Cecil.Cil;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,6 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public bool IsBlocked { get; private set; } = false;
     public ItemType Type => type;
     public DraggableItem NextLvlItem => nextLvlItem;
+
     [SerializeField]
     private Image image;
 
@@ -20,12 +20,18 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private ItemType type;
 
     private Transform _parentAfterDrag;
+    private RectTransform rectTransform;
+
+    private void Start()
+    {
+        rectTransform = gameObject.GetComponent<RectTransform>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if(IsBlocked)
+        if (IsBlocked)
             return;
-        
+
         _parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
@@ -48,13 +54,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         _parentAfterDrag = parent;
     }
-    
+
     public void Block()
     {
         IsBlocked = true;
         image.raycastTarget = false;
     }
-    
+
     public void Unlock()
     {
         IsBlocked = false;
