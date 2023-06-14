@@ -1,9 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
 public class LevelState : MonoBehaviour
-{ 
+{
+    [SerializeField]
+    private Timer timer;
+
+    [SerializeField]
+    private float levelDuration;
+
     [SerializeField]
     private DraggableItem defaultItem;
 
@@ -14,28 +21,32 @@ public class LevelState : MonoBehaviour
     private GameObject questsGroup;
 
     [SerializeField]
-    private GameObject congratulationsScreen;
+    private Canvas levelCompletedScreen;
+
+    [SerializeField]
+    private Canvas levelFailedScreen;
 
     private List<InventorySlot> _items;
     private List<QuestItem> _quests;
     private ObjectPool<DraggableItem> _pool;
-    
+
     private int completedQuests = 0;
-    
+
     private GameSession _gameSession;
 
     private void Awake()
     {
         _gameSession = FindObjectOfType<GameSession>();
         _gameSession.ResetCurrency();
-        
-        congratulationsScreen.SetActive(false);
-        
+
+        levelCompletedScreen.gameObject.SetActive(false);
+        levelFailedScreen.gameObject.SetActive(false);
+
         _items = new List<InventorySlot>(playgroundGroup.GetComponentsInChildren<InventorySlot>());
         _quests = new List<QuestItem>(questsGroup.GetComponentsInChildren<QuestItem>());
-        
-        _quests.ForEach(q=>q.OnQuestCompleted += OnQuestCompleted);
-        
+
+        _quests.ForEach(q => q.OnQuestCompleted += OnQuestCompleted);
+
         _pool = new ObjectPool<DraggableItem>(
             () => Instantiate(defaultItem, transform),
             item => item.gameObject.SetActive(true),
@@ -47,6 +58,17 @@ public class LevelState : MonoBehaviour
             item => Destroy(item.gameObject),
             false, 50, 60
         );
+    }
+
+    private void Start()
+    {
+        timer.StartTimer(levelDuration);
+    }
+
+    public void OnTimeEnded()
+    {
+        Time.timeScale = 0;
+        levelFailedScreen.gameObject.SetActive(true);
     }
 
     public bool SpawnItem(DraggableItem item)
@@ -83,7 +105,7 @@ public class LevelState : MonoBehaviour
         if (completedQuests == _quests.Count)
         {
             Debug.Log("All quests completed");
-            congratulationsScreen.SetActive(true);
+            levelCompletedScreen.gameObject.SetActive(true);
         }
     }
 }
