@@ -14,6 +14,7 @@ public class Spawner: MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log( "Spawner clicked");
         _levelState.SpawnItem(item);
     }
 }
