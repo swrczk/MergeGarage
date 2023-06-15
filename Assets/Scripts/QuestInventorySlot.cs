@@ -18,9 +18,12 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
     [SerializeField]
     private InventorySlot inventorySlot;
 
+    [SerializeField]
+    private float scale = 0.5f;
+
     private void Start()
-    {
-        previewImage.transform.localScale = 0.8f * Vector3.one;
+    { 
+        previewImage.transform.localScale = scale * Vector3.one;
         previewImage.sprite = requiredItem.GetComponent<Image>().sprite;
     }
 
@@ -35,7 +38,7 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
         if (draggableItem.Type == requiredItem.Type && IsEmpty)
         {
             IsEmpty = false;
-            draggableItem.transform.localScale = 0.8f * Vector3.one;
+            draggableItem.transform.localScale = scale * Vector3.one;
             inventorySlot.OnDrop(eventData);
             OnItemAdded?.Invoke();
         }
