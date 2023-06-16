@@ -16,6 +16,6 @@ public class TimerElement:MonoBehaviour
     private void ChangeTimerText(float time)
     {
         TimeSpan timeSpan = TimeSpan.FromSeconds(time);
-        timerText.text = timeSpan.ToString("hh':'mm':'ss");
+        timerText.text = timeSpan.ToString("mm':'ss");
     }
 }
