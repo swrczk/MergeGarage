@@ -9,6 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public bool IsBlocked { get; private set; } = false;
     public ItemType Type => type;
     public DraggableItem NextLvlItem => nextLvlItem;
+    public bool IsFinal => nextLvlItem == null;
 
     [SerializeField]
     private Image image;

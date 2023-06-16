@@ -27,6 +27,9 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         if (AnyIsBlocked(draggableItem, itemInSlot))
             return;
         
+        if (AnyIsFinal(draggableItem, itemInSlot))
+            return;
+
         if (itemInSlot.Type == draggableItem.Type)
         {
             _levelState.Merge(itemInSlot, draggableItem, transform);
@@ -36,5 +39,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     private bool AnyIsBlocked(DraggableItem draggableItem, DraggableItem requiredItem)
     {
         return draggableItem.IsBlocked || requiredItem.IsBlocked;
+    }
+
+    private bool AnyIsFinal(DraggableItem draggableItem, DraggableItem requiredItem)
+    {
+        return draggableItem.IsFinal || requiredItem.IsFinal;
     }
 }
