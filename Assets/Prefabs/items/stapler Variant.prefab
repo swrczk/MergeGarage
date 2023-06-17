@@ -93,11 +93,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1185504820726136557, guid: 22ac4fa22696f8f4a94fe9985dccd620, type: 3}
       propertyPath: type
-      value: 39
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185504820726136557, guid: 22ac4fa22696f8f4a94fe9985dccd620, type: 3}
+      propertyPath: nextLvlItem
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1185504820726136559, guid: 22ac4fa22696f8f4a94fe9985dccd620, type: 3}
       propertyPath: m_Name
-      value: stapler
+      value: stapler Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1185504820726136562, guid: 22ac4fa22696f8f4a94fe9985dccd620, type: 3}
       propertyPath: m_Sprite

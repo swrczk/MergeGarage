@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7490194905833309061, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
       propertyPath: m_Name
-      value: glue
+      value: glue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7490194905833309062, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
       propertyPath: m_Pivot.x
@@ -97,8 +97,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490194905833309063, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
       propertyPath: type
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7490194905833309063, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 2701593656663053302, guid: 77a50987df20a034e994caef8d2402d3, type: 3}
     - target: {fileID: 7490194905833309080, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
       propertyPath: m_Sprite
       value: 

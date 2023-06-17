@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1275583837463705101, guid: 314ba5a4284214a49a5c672ba7794cad, type: 3}
       propertyPath: m_Name
-      value: saw2
+      value: saw2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1275583837463705102, guid: 314ba5a4284214a49a5c672ba7794cad, type: 3}
       propertyPath: m_Pivot.x
@@ -97,7 +97,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275583837463705103, guid: 314ba5a4284214a49a5c672ba7794cad, type: 3}
       propertyPath: type
-      value: 20
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275583837463705103, guid: 314ba5a4284214a49a5c672ba7794cad, type: 3}
+      propertyPath: nextLvlItem
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1275583837463705104, guid: 314ba5a4284214a49a5c672ba7794cad, type: 3}
       propertyPath: m_Sprite

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8841923122046648009, guid: d2ac69dd35b01174f8fc6c0fbfefde1f, type: 3}
       propertyPath: m_Name
-      value: wire
+      value: wire Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8841923122046648010, guid: d2ac69dd35b01174f8fc6c0fbfefde1f, type: 3}
       propertyPath: m_Pivot.x
@@ -97,8 +97,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8841923122046648011, guid: d2ac69dd35b01174f8fc6c0fbfefde1f, type: 3}
       propertyPath: type
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8841923122046648011, guid: d2ac69dd35b01174f8fc6c0fbfefde1f, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 6288218929643526825, guid: 62bd00c22cb785b40b789b04029cd520, type: 3}
     - target: {fileID: 8841923122046648020, guid: d2ac69dd35b01174f8fc6c0fbfefde1f, type: 3}
       propertyPath: m_Sprite
       value: 

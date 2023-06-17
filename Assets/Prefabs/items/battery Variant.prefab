@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7740117038283572261, guid: c25c44323631c584ca9ae8de75e59b06, type: 3}
       propertyPath: m_Name
-      value: battery
+      value: battery Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7740117038283572262, guid: c25c44323631c584ca9ae8de75e59b06, type: 3}
       propertyPath: m_Pivot.x
@@ -97,8 +97,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7740117038283572263, guid: c25c44323631c584ca9ae8de75e59b06, type: 3}
       propertyPath: type
-      value: 35
+      value: 38
       objectReference: {fileID: 0}
+    - target: {fileID: 7740117038283572263, guid: c25c44323631c584ca9ae8de75e59b06, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 634694668932003228, guid: 2f3ceb6981d1c4b4281a532f544a84a3, type: 3}
     - target: {fileID: 7740117038283572280, guid: c25c44323631c584ca9ae8de75e59b06, type: 3}
       propertyPath: m_Sprite
       value: 

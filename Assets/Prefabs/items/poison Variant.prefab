@@ -97,11 +97,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6725383021309184985, guid: 08e0c8ca9bc7a0548b60d0edffa126a1, type: 3}
       propertyPath: type
-      value: 36
+      value: 39
       objectReference: {fileID: 0}
+    - target: {fileID: 6725383021309184985, guid: 08e0c8ca9bc7a0548b60d0edffa126a1, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 1931865818800036862, guid: bb104018beb843b48b215a2649fa960e, type: 3}
     - target: {fileID: 6725383021309184987, guid: 08e0c8ca9bc7a0548b60d0edffa126a1, type: 3}
       propertyPath: m_Name
-      value: poison
+      value: poison Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08e0c8ca9bc7a0548b60d0edffa126a1, type: 3}

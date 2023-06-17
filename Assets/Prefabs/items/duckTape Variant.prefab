@@ -93,11 +93,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710740514228365769, guid: 2202f44f7dd37a147879ce1036923104, type: 3}
       propertyPath: type
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 2710740514228365769, guid: 2202f44f7dd37a147879ce1036923104, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 2402233638369936272, guid: f34b81dfedc8afc43a6312cf54def664, type: 3}
     - target: {fileID: 2710740514228365771, guid: 2202f44f7dd37a147879ce1036923104, type: 3}
       propertyPath: m_Name
-      value: duckTape
+      value: duckTape Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2710740514228365782, guid: 2202f44f7dd37a147879ce1036923104, type: 3}
       propertyPath: m_Sprite
