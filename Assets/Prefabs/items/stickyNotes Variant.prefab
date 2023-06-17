@@ -13,12 +13,16 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 524875f3f605cf94ea14b5edd0322d9d, type: 3}
     - target: {fileID: 3622684705496594648, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
       propertyPath: m_Name
-      value: stickyNotes
+      value: stickyNotes Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
       propertyPath: type
-      value: 31
+      value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 2355589560668855873, guid: c3ffbc06f4c3d8646838076dad7a530f, type: 3}
     - target: {fileID: 3622684705496594651, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

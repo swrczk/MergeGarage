@@ -5,6 +5,8 @@ public enum ItemType
     Item2,
     Spawner1,
     Spawner2,
+    Spawner3,
+    Spawner4,
     //-------------------
     Pin,
     PaperClip,

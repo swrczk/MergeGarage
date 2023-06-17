@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: cb8ac2d1f3afadd4583917a8f98cf201, type: 3}
     - target: {fileID: 2970134884639834353, guid: 747148229f986174587426865e0ece3d, type: 3}
       propertyPath: m_Name
-      value: toiletPaper
+      value: toiletPaper Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2970134884639834354, guid: 747148229f986174587426865e0ece3d, type: 3}
       propertyPath: m_Pivot.x
@@ -101,7 +101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970134884639834355, guid: 747148229f986174587426865e0ece3d, type: 3}
       propertyPath: type
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 2970134884639834355, guid: 747148229f986174587426865e0ece3d, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 7005724505509210986, guid: 2ebd27a22d626f047b50a1aec7bb801e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747148229f986174587426865e0ece3d, type: 3}

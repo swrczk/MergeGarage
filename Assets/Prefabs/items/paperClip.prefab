@@ -17,8 +17,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561243351501078070, guid: 475054d3851d8d944ab1fc0e38269d08, type: 3}
       propertyPath: type
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3561243351501078070, guid: 475054d3851d8d944ab1fc0e38269d08, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 4641259624124003751, guid: 882184224f546e3489195d502ce23c55, type: 3}
     - target: {fileID: 3561243351501078071, guid: 475054d3851d8d944ab1fc0e38269d08, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

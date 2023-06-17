@@ -93,11 +93,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254504528633046125, guid: 9607e3cd315fd214aa121ae0f0e84cb7, type: 3}
       propertyPath: type
-      value: 19
+      value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 8254504528633046125, guid: 9607e3cd315fd214aa121ae0f0e84cb7, type: 3}
+      propertyPath: nextLvlItem
+      value: 
+      objectReference: {fileID: 2984470835841728864, guid: cd4c4a99903bbce45975fbb537cc6eea, type: 3}
     - target: {fileID: 8254504528633046127, guid: 9607e3cd315fd214aa121ae0f0e84cb7, type: 3}
       propertyPath: m_Name
-      value: saw1
+      value: saw1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8254504528633046130, guid: 9607e3cd315fd214aa121ae0f0e84cb7, type: 3}
       propertyPath: m_Sprite

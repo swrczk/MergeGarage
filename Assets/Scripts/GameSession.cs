@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
     [SerializeField]
     private GameEvent onCurrencyChanged;
+    [SerializeField]
+    private int nextLevel;
 
     public int Currency { get; private set; } = 0;
 
@@ -17,5 +20,9 @@ public class GameSession : MonoBehaviour
     {
         Currency = 0;
         onCurrencyChanged.Raise(this, Currency);
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(nextLevel);
     }
 }
