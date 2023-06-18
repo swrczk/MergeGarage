@@ -9,7 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public bool IsBlocked { get; private set; } = false;
     public ItemType Type => type;
     public DraggableItem NextLvlItem => nextLvlItem;
-    public bool IsFinal => nextLvlItem == null;
+    public bool IsFinal => nextLvlItem == null || isFinal;
 
     [SerializeField]
     private Image image;
@@ -22,6 +22,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private Transform _parentAfterDrag;
     private RectTransform rectTransform;
+    private bool isFinal = false;
 
     private void Start()
     {
@@ -54,6 +55,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void SetNewSlot(Transform parent)
     {
         _parentAfterDrag = parent;
+    }
+
+    public void SetFinal()
+    {
+        isFinal = true;
     }
 
     public void Block()
