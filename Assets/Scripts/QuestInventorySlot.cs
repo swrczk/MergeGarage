@@ -21,6 +21,9 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
     [SerializeField]
     private float scale = 0.5f;
 
+    [SerializeField]
+    private Color slotCompletedColor;
+
     private void Start()
     { 
         previewImage.transform.localScale = scale * Vector3.one;
@@ -39,7 +42,9 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
         {
             IsEmpty = false;
             draggableItem.transform.localScale = scale * Vector3.one;
+            draggableItem.SetFinal();
             inventorySlot.OnDrop(eventData);
+            inventorySlot.GetComponent<Image>().color = slotCompletedColor;
             OnItemAdded?.Invoke();
         }
         else

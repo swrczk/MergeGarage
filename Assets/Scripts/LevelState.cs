@@ -60,6 +60,7 @@ public class LevelState : MonoBehaviour
             item => Destroy(item.gameObject),
             false, 50, 60
         );
+        Time.timeScale = 1;
     }
 
     private void Start()
