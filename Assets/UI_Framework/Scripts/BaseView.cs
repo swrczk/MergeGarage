@@ -4,9 +4,10 @@ namespace UI_Framework.Scripts
 {
     public class BaseView : CustomUIComponent
     {
-        public ViewSO viewData;
+        public ViewSo _viewData;
 
-        private VerticalLayoutGroup verticalLayoutGroup; 
+        private VerticalLayoutGroup verticalLayoutGroup;
+
         public override void Setup()
         {
             verticalLayoutGroup = GetComponent<VerticalLayoutGroup>();
@@ -14,8 +15,8 @@ namespace UI_Framework.Scripts
 
         public override void Configure()
         {
-            verticalLayoutGroup.padding = viewData.padding;
-            verticalLayoutGroup.spacing = viewData.spacing;
+            verticalLayoutGroup.padding = _viewData._padding;
+            verticalLayoutGroup.spacing = _viewData._spacing;
         }
     }
 }

@@ -616,7 +616,7 @@ PrefabInstance:
       value: questSlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 404363408459707612, guid: 44ac1888095c8784da23cdc2f99eca9b, type: 3}
     m_RemovedComponents: []
@@ -1631,7 +1631,7 @@ PrefabInstance:
       value: questSlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 404363408459707612, guid: 44ac1888095c8784da23cdc2f99eca9b, type: 3}
     m_RemovedComponents: []
@@ -2324,8 +2324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fbba04689a86642aff24bcdb67cc7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTimerFinished: {fileID: 11400000, guid: 0c4d5d73e88a78e4e9f1a1d934288c41, type: 2}
-  onTimeChanged: {fileID: 11400000, guid: d7e142b6bf2d6f24f8642cc767e724b9, type: 2}
+  _onTimerFinished: {fileID: 11400000, guid: 0c4d5d73e88a78e4e9f1a1d934288c41, type: 2}
+  _onTimeChanged: {fileID: 11400000, guid: d7e142b6bf2d6f24f8642cc767e724b9, type: 2}
 --- !u!224 &719297700 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1273808168921387623, guid: 49fc5d7396654694297ed0ca816fecba, type: 3}
@@ -3407,7 +3407,7 @@ PrefabInstance:
       value: questSlot (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
     m_RemovedComponents: []
@@ -3744,8 +3744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2698bfe859881641808a81e9743b060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyText: {fileID: 48096395}
-  timeBonusText: {fileID: 4837789799150349626}
+  _currencyText: {fileID: 48096395}
+  _timeBonusText: {fileID: 4837789799150349626}
 --- !u!1001 &1167295134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4038,15 +4038,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 275091006}
     m_Modifications:
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: rewardCurrency
+      propertyPath: _rewardCurrency
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[0]
+      propertyPath: _questInventorySlots.Array.data[0]
       value: 
       objectReference: {fileID: 2098277802}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[1]
+      propertyPath: _questInventorySlots.Array.data[1]
       value: 
       objectReference: {fileID: 1046077157}
     - target: {fileID: 2860656409666476229, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
@@ -4927,7 +4927,7 @@ PrefabInstance:
       value: questSlot (0)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
     m_RemovedComponents: []
@@ -5258,13 +5258,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b4e1d40e5f47e88e83a26df5ae3ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 705824237}
-  levelDuration: 90
-  defaultItem: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
-  playgroundGroup: {fileID: 304771598}
-  questsGroup: {fileID: 275091005}
-  levelCompletedScreen: {fileID: 1161083840}
-  levelFailedScreen: {fileID: 1446638143}
+  _timer: {fileID: 705824237}
+  _levelDuration: 90
+  _defaultItem: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
+  _playgroundGroup: {fileID: 304771598}
+  _questsGroup: {fileID: 275091005}
+  _levelCompletedScreen: {fileID: 1161083840}
+  _levelFailedScreen: {fileID: 1446638143}
 --- !u!4 &1508295507
 Transform:
   m_ObjectHideFlags: 0
@@ -5292,8 +5292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4d2bcff5aff184baa73b35318a2d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 0c4d5d73e88a78e4e9f1a1d934288c41, type: 2}
-  response:
+  _gameEvent: {fileID: 11400000, guid: 0c4d5d73e88a78e4e9f1a1d934288c41, type: 2}
+  _response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1508295506}
@@ -5321,15 +5321,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 275091006}
     m_Modifications:
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: rewardCurrency
+      propertyPath: _rewardCurrency
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[0]
+      propertyPath: _questInventorySlots.Array.data[0]
       value: 
       objectReference: {fileID: 267939223}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[1]
+      propertyPath: _questInventorySlots.Array.data[1]
       value: 
       objectReference: {fileID: 1286473825}
     - target: {fileID: 2860656409666476229, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
@@ -5786,7 +5786,7 @@ PrefabInstance:
       value: questSlot (0)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
     m_RemovedComponents: []
@@ -6132,15 +6132,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 275091006}
     m_Modifications:
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: rewardCurrency
+      propertyPath: _rewardCurrency
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[0]
+      propertyPath: _questInventorySlots.Array.data[0]
       value: 
       objectReference: {fileID: 2036887163}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[1]
+      propertyPath: _questInventorySlots.Array.data[1]
       value: 
       objectReference: {fileID: 1655973866}
     - target: {fileID: 2860656409666476229, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
@@ -6451,7 +6451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce0aa6de26b8f4489a52e4e7e3fd21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCurrencyChanged: {fileID: 11400000, guid: 4882077d36e9f3b44a226ca6a3aada1b, type: 2}
+  _onCurrencyChanged: {fileID: 11400000, guid: 4882077d36e9f3b44a226ca6a3aada1b, type: 2}
 --- !u!4 &1987905244
 Transform:
   m_ObjectHideFlags: 0
@@ -6778,7 +6778,7 @@ PrefabInstance:
       value: questSlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 404363408459707612, guid: 44ac1888095c8784da23cdc2f99eca9b, type: 3}
     m_RemovedComponents: []
@@ -6895,7 +6895,7 @@ PrefabInstance:
       value: questSlot (0)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
     m_RemovedComponents: []
@@ -7150,15 +7150,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 275091006}
     m_Modifications:
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: rewardCurrency
+      propertyPath: _rewardCurrency
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[0]
+      propertyPath: _questInventorySlots.Array.data[0]
       value: 
       objectReference: {fileID: 1861185220}
     - target: {fileID: 84675138699101416, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
-      propertyPath: questInventorySlots.Array.data[1]
+      propertyPath: _questInventorySlots.Array.data[1]
       value: 
       objectReference: {fileID: 725578397}
     - target: {fileID: 2860656409666476229, guid: 05482b5de16d14846bbe3b3049f47613, type: 3}
@@ -7332,7 +7332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e5f97fd915d0346a9cfb98139af1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyText: {fileID: 4837789799150349626}
+  _currencyText: {fileID: 4837789799150349626}
 --- !u!114 &3011663165262838835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7345,8 +7345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4d2bcff5aff184baa73b35318a2d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 4882077d36e9f3b44a226ca6a3aada1b, type: 2}
-  response:
+  _gameEvent: {fileID: 11400000, guid: 4882077d36e9f3b44a226ca6a3aada1b, type: 2}
+  _response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1949502861060017326}
@@ -7457,7 +7457,7 @@ PrefabInstance:
       value: questSlot (0)
       objectReference: {fileID: 0}
     - target: {fileID: 5807632295880820440, guid: 61201397a9d38144cb384e3e82810cb1, type: 3}
-      propertyPath: requiredItem
+      propertyPath: _requiredItem
       value: 
       objectReference: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
     m_RemovedComponents: []
@@ -7849,7 +7849,7 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8609183011015973629, guid: 0f14d899f65f7c0419c593f121b62202, type: 3}
-      propertyPath: rewardItem
+      propertyPath: _rewardItem
       value: 
       objectReference: {fileID: 2029809576}
     m_RemovedComponents: []

@@ -50,9 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629175297600e074e987c97d9cf4764f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theme: {fileID: 11400000, guid: 68188b5c7031b6c45a8ff2c201a0a11a, type: 2}
-  style: 0
-  onClick:
+  _theme: {fileID: 11400000, guid: 68188b5c7031b6c45a8ff2c201a0a11a, type: 2}
+  _style: 0
+  _onClick:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3350289725663499932

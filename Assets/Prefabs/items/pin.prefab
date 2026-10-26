@@ -12,11 +12,11 @@ PrefabInstance:
       value: pin
       objectReference: {fileID: 0}
     - target: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8102149665958778538, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 7065390745626296052, guid: 422af10ab64d35f47a3c3d899c1797dc, type: 3}
     - target: {fileID: 8102149665958778539, guid: 748025bd211934f47ae4d0c33b1566d0, type: 3}

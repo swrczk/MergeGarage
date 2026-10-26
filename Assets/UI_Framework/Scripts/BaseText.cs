@@ -4,8 +4,8 @@ namespace UI_Framework.Scripts
 {
     public class BaseText : CustomUIComponent
     {
-        public TextSO textData;
-        public Style style;
+        public TextSo _textData;
+        public Style _style;
 
         private TextMeshProUGUI text;
 
@@ -16,9 +16,9 @@ namespace UI_Framework.Scripts
 
         public override void Configure()
         {
-            text.font = textData.font;
-            text.fontSize = textData.fontSize;
-            text.color = textData.theme.GetTextColor(style);
+            text.font = _textData._font;
+            text.fontSize = _textData._fontSize;
+            text.color = _textData._theme.GetTextColor(_style);
         }
     }
 }

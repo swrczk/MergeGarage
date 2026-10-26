@@ -100,19 +100,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ef60ecedb5800dd4b953fd27a1f3ee90, type: 3}
     - target: {fileID: 3210274564775839207, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3210274564775839207, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: image
+      propertyPath: _image
       value: 
       objectReference: {fileID: 3006015033607187293}
     - target: {fileID: 3210274564775839207, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 8043535583825663013, guid: 5173ba46d37cba04fbd8d23403876c4e, type: 3}
     - target: {fileID: 3224597409705013341, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: item
+      propertyPath: _item
       value: 
       objectReference: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
     m_RemovedComponents: []

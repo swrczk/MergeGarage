@@ -16,11 +16,11 @@ PrefabInstance:
       value: notebook Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 7740117038283572263, guid: c25c44323631c584ca9ae8de75e59b06, type: 3}
     - target: {fileID: 3622684705496594651, guid: 36df140efd355094a93a83ef10356d4a, type: 3}

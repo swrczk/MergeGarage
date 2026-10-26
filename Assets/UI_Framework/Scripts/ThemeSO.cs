@@ -3,39 +3,36 @@ using UnityEngine;
 namespace UI_Framework.Scripts
 {
     [CreateAssetMenu(fileName = "Theme", menuName = "CustomUI/ThemeSO")]
-    public class ThemeSO : ScriptableObject
+    public class ThemeSo : ScriptableObject
     {
-        [Header("Primary")]
-        public Color primaryBg;
+        [Header("Primary")] public Color _primaryBg;
 
-        public Color primaryText;
+        public Color _primaryText;
 
-        [Header("Secondary")]
-        public Color secondaryBg;
+        [Header("Secondary")] public Color _secondaryBg;
 
-        public Color secondaryText;
+        public Color _secondaryText;
 
-        [Header("Tertiary")]
-        public Color tertiaryBg;
+        [Header("Tertiary")] public Color _tertiaryBg;
 
-        public Color tertiaryText;
+        public Color _tertiaryText;
 
-        [Header("Other")]
-        public Color disabledBg;
-        public Color disabledText;
+        [Header("Other")] public Color _disabledBg;
+
+        public Color _disabledText;
 
         public Color GetTextColor(Style style)
         {
             switch (style)
             {
                 case Style.Primary:
-                    return primaryText;
+                    return _primaryText;
                 case Style.Secondary:
-                    return secondaryText;
+                    return _secondaryText;
                 case Style.Tertiary:
-                    return tertiaryText;
+                    return _tertiaryText;
                 default:
-                    return disabledBg;
+                    return _disabledBg;
             }
         }
 
@@ -44,13 +41,13 @@ namespace UI_Framework.Scripts
             switch (style)
             {
                 case Style.Primary:
-                    return primaryBg;
+                    return _primaryBg;
                 case Style.Secondary:
-                    return secondaryBg;
+                    return _secondaryBg;
                 case Style.Tertiary:
-                    return tertiaryBg;
+                    return _tertiaryBg;
                 default:
-                    return disabledText;
+                    return _disabledText;
             }
         }
     }

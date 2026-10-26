@@ -12,11 +12,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2dec00141e843984c842446e9f271964, type: 3}
     - target: {fileID: 8952500111118057108, guid: 458ebbae96e973541b4aa3b93f03a6b1, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8952500111118057108, guid: 458ebbae96e973541b4aa3b93f03a6b1, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 2970134884639834355, guid: 747148229f986174587426865e0ece3d, type: 3}
     - target: {fileID: 8952500111118057109, guid: 458ebbae96e973541b4aa3b93f03a6b1, type: 3}

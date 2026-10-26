@@ -100,11 +100,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2970134884639834355, guid: 747148229f986174587426865e0ece3d, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 2970134884639834355, guid: 747148229f986174587426865e0ece3d, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 7005724505509210986, guid: 2ebd27a22d626f047b50a1aec7bb801e, type: 3}
     m_RemovedComponents: []

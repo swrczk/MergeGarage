@@ -89,5 +89,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd89da544c894af28501ab6e64b0fc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewData: {fileID: 11400000, guid: 85301454e11ba1a41a50acba00fd654c, type: 2}
-  style: 0
+  _viewData: {fileID: 11400000, guid: 85301454e11ba1a41a50acba00fd654c, type: 2}
+  _style: 0

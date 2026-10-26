@@ -16,11 +16,11 @@ PrefabInstance:
       value: book Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 3622684705496594650, guid: 36df140efd355094a93a83ef10356d4a, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3622684705496594651, guid: 36df140efd355094a93a83ef10356d4a, type: 3}

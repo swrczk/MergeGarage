@@ -4,11 +4,11 @@ namespace UI_Framework.Scripts
 {
     public class BaseContainer : CustomUIComponent
     {
-        public ViewSO viewData;
+        public ViewSo _viewData;
+
+        public Style _style;
 
         private Image image;
-
-        public Style style;
 
         public override void Setup()
         {
@@ -17,7 +17,7 @@ namespace UI_Framework.Scripts
 
         public override void Configure()
         {
-            image.color = viewData.theme.GetBgColor(style);
+            image.color = _viewData._theme.GetBgColor(_style);
         }
     }
 }

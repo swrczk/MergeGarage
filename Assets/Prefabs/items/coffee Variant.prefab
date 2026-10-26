@@ -16,11 +16,11 @@ PrefabInstance:
       value: coffee Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1931865818800036862, guid: bb104018beb843b48b215a2649fa960e, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1931865818800036862, guid: bb104018beb843b48b215a2649fa960e, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 9214035778788608561, guid: 8db8cdca2e21d974db37a79adcbdb2fc, type: 3}
     - target: {fileID: 1931865818800036863, guid: bb104018beb843b48b215a2649fa960e, type: 3}

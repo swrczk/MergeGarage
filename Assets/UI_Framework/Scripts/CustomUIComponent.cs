@@ -4,23 +4,23 @@ namespace UI_Framework.Scripts
 {
     public abstract class CustomUIComponent : MonoBehaviour
     {
-        public abstract void Setup();
-        public abstract void Configure();
-
         private void Awake()
         {
             Init();
         }
 
+        private void OnValidate()
+        {
+            Init();
+        }
+
+        public abstract void Setup();
+        public abstract void Configure();
+
         public void Init()
         {
             Setup();
             Configure();
-        }
-
-        private void OnValidate()
-        {
-            Init();
         }
     }
 }

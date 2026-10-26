@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7609d3f41fe0d014d81cf6c9eca6e46c, type: 3}
   m_Name: Title
   m_EditorClassIdentifier: 
-  theme: {fileID: 11400000, guid: 68188b5c7031b6c45a8ff2c201a0a11a, type: 2}
-  font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  fontSize: 100
+  _theme: {fileID: 11400000, guid: 68188b5c7031b6c45a8ff2c201a0a11a, type: 2}
+  _font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  _fontSize: 100

@@ -96,11 +96,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7490194905833309063, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7490194905833309063, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 2701593656663053302, guid: 77a50987df20a034e994caef8d2402d3, type: 3}
     - target: {fileID: 7490194905833309080, guid: 086d6a23d98a7f6489e8e5213b03a7aa, type: 3}

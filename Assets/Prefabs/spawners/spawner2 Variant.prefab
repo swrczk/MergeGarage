@@ -100,15 +100,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 23f9105a159684d4690f4417a939b583, type: 3}
     - target: {fileID: 3210274564775839207, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: type
+      propertyPath: _type
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3210274564775839207, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: nextLvlItem
+      propertyPath: _nextLvlItem
       value: 
       objectReference: {fileID: 1787332715670739459, guid: c7ff8a7478518c94a841955f942afd3e, type: 3}
     - target: {fileID: 3224597409705013341, guid: a9bf88f5053ab6e47a47bf6493369aa7, type: 3}
-      propertyPath: item
+      propertyPath: _item
       value: 
       objectReference: {fileID: 4236521690084848587, guid: 5cf4a6cd12d38ad47b1d1c819ff42896, type: 3}
     m_RemovedComponents: []

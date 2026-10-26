@@ -3,11 +3,11 @@ using UnityEngine;
 namespace UI_Framework.Scripts
 {
     [CreateAssetMenu(fileName = "ViewSO", menuName = "CustomUI/ViewSO")]
-    public class ViewSO : ScriptableObject
+    public class ViewSo : ScriptableObject
     {
-        public ThemeSO theme;
-    
-        public RectOffset padding;
-        public float spacing;
+        public ThemeSo _theme;
+
+        public RectOffset _padding;
+        public float _spacing;
     }
 }
