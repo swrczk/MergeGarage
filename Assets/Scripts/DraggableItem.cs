@@ -42,11 +42,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        if (IsBlocked)
+            return;
+
+        transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (IsBlocked)
+            return;
+
         transform.SetParent(_parentAfterDrag);
         image.raycastTarget = true;
         OnEndDragItem?.Invoke();
@@ -76,9 +82,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void Setup(DraggableItem item)
     {
+        // Pooled items keep state from their previous use, so reset everything here
         image.sprite = item.image.sprite;
-        image.raycastTarget = true;
         nextLvlItem = item.NextLvlItem;
         type = item.Type;
+        isFinal = false;
+        transform.localScale = Vector3.one;
+        Unlock();
     }
 }

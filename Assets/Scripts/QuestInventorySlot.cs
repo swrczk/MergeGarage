@@ -47,9 +47,10 @@ public class QuestInventorySlot : MonoBehaviour, IDropHandler
             inventorySlot.GetComponent<Image>().color = slotCompletedColor;
             OnItemAdded?.Invoke();
         }
-        else
+        else if (IsEmpty)
         {
             Debug.Log("Wrong item");
+            ShakeFeedback.Play(previewImage);
         }
     }
 

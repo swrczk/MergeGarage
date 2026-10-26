@@ -23,18 +23,23 @@ public class Timer : MonoBehaviour
 
     public void StopTimer()
     {
+        if (coroutine == null)
+            return;
+
         StopCoroutine(coroutine);
+        coroutine = null;
     }
 
     private IEnumerator RunTimer(float duration)
     {
         while (timeValue > 0)
         {
-            timeValue -= Time.deltaTime;
+            timeValue = Mathf.Max(0, timeValue - Time.deltaTime);
             onTimeChanged.Raise(this, timeValue);
             yield return null;
         }
 
+        coroutine = null;
         onTimerFinished.Raise();
     }
 }

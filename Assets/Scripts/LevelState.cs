@@ -94,7 +94,7 @@ public class LevelState : MonoBehaviour
     public void Merge(DraggableItem itemInSlot, DraggableItem draggableItem, Transform parent)
     {
         var newItem = _pool.Get();
-        newItem.transform.SetParent(parent);
+        newItem.transform.SetParent(parent, false);
         newItem.Setup(itemInSlot.NextLvlItem);
 
         _pool.Release(itemInSlot);
@@ -108,11 +108,11 @@ public class LevelState : MonoBehaviour
         if (completedQuests == _quests.Count)
         {
             Debug.Log("All quests completed");
-            levelCompletedScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
             timer.StopTimer();
             var timeBonus = Mathf.RoundToInt(timer.CurrentTimeValue);
             levelCompletedScreen.OnLevelCompleted(_gameSession.Currency, timeBonus);
+            _gameSession.AddCurrency(timeBonus);
         }
     }
 }
